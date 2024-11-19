@@ -1,0 +1,6 @@
+@TrackApps.Server_HostAddress = http://localhost:5112
+
+GET {{TrackApps.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

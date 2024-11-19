@@ -1,0 +1,30 @@
+<h1 id="tableLabel">Current Interviews</h1>
+
+<p *ngIf="!interviews"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<table *ngIf="interviews">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Company</th>
+      <th>Position</th>
+      <th>Interviewer</th>
+      <th>InterviewDate</th>
+      <th>ContactNumber</th>
+      <th>Round</th>
+      <th>Follow Up (kane, lo)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let interview of interviews">
+      <td>{{ interview.Id }}</td>
+      <td>{{ interview.Company }}</td>
+      <td>{{ interview.Position }}</td>
+      <td>{{ interview.Interviewer }}</td>
+      <td>{{ interview.InterviewDate }}</td>
+      <td>{{ interview.ContactNumber }}</td>
+      <td>{{ interview.Round }}</td>
+      <td>{{ interview.FollowUp }}</td>
+    </tr>
+  </tbody>
+</table>
